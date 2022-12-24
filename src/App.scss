@@ -169,11 +169,14 @@ h1,h2,h3,h4,h5,h6{
 
 #socialIcons{
   width:100%;
-  max-width:200px;
+  max-width:270px;
 }
 #email a{
   color:#fff;
   text-decoration:none;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 13px;
 }
 #bottomOfPageHeader{
   width: 100%;

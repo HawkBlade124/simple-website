@@ -14,7 +14,7 @@ const Navigation = () => {
         <header className="header">
         <img id="headerLogo" src={logo}/>
             <div id="headerWrap">
-                <div id="socialIcons" className="d-flex justify-content-center">
+                <div id="socialIcons" className="d-flex justify-content-start">
                     <FontAwesomeIcon icon={faGithub} className="fontIcon"/>
                     <FontAwesomeIcon icon={faLinkedin} className="fontIcon"/>
                 </div>
