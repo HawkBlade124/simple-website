@@ -10,7 +10,10 @@ import Navigation from "./pages/Navigation";
 import Contact from "./pages/Contact";
 import BuyRite from "./pages/BuyRite";
 import NoPage from "./pages/NoPage";
+
 import '../node_modules/font-awesome/css/font-awesome.min.css'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin  } from '@fortawesome/free-brands-svg-icons';
 
 function App() {
   return (
@@ -28,8 +31,13 @@ function App() {
             </Route>
           </Routes>
         </BrowserRouter>   
-        <footer>
+        <footer className='copyright d-flex flex-row justify-content-between align-items-center'>
+
           <copyright>Copyright &copy; 2022 Fullerview.net</copyright>
+          <div id="socialIcons">
+                    <FontAwesomeIcon icon={faGithub} className="fontIcon"/>
+                    <FontAwesomeIcon icon={faLinkedin} className="fontIcon"/>
+                </div>
         </footer>
   </div>
   );

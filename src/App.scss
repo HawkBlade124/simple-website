@@ -1,43 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-$bgColor:#024059;
-$primaryColor:#024059;
-$secondaryColor: #04BF8A;
-$linkColor:#04BF8A;
-$hoverColor:#9FC131;
-$textColor:#04BF8A;
-$textColorSecondary:#fff;
-$headerColor:#D6D58E;
+$bgColor:#0D2447;
+$primaryColor:#0D2447;
+$secondaryColor: #BCE299;
+$linkColor:#63ACE5;
+$hoverColor:#DCE8EC;
+$textColor:#63ACE5;
 $fontFamily:'Roboto', sans-serif;
+$borderColor:#679D44;
 
 body{
   background:$bgColor;
-  font-family:$fontFamily;
+  font-family:$fontFamily;  
 }
 
-.siteWrapper{
-  display:flex;
-  justify-content: center;
-  text-align: center;
-
+.header{
+  background:$primaryColor; 
+  width:100%;
+  padding:15px 0;
+}
+#headerWrap{
+  width:100%;
+  max-width: 1600px;
+  margin:0 auto;
 }
 
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#logo{
+  width:100%;
+    img{
+      width:100%;
+      max-width: 100px;
+    }
 }
 
 .navList {
-  display: flex;
+  display:flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-end; 
+  max-width:1500px;
   width:100%;
   background-color: $primaryColor;
   font-size: calc(10px + 2vmin);
-  color: white;
-list-style-type: none;
+  color: $textColor;
+  list-style-type: none;
 }
 
 .navList .navListTabs a{
@@ -49,14 +55,17 @@ list-style-type: none;
   text-transform:uppercase
 }
 .navList .navListTabs a:hover{
-  background:#D6D58E;
-  color: #005C53;
+  color: $hoverColor;
   transition:0.2s ease
+}
+
+#introHead{
+  color:$secondaryColor;
+  font-size:18px;
 }
 .App-header .navList{
   display:flex;
   width:100%;
-  justify-content: flex-end;
   list-style-type: none;
 }
 
@@ -64,50 +73,34 @@ list-style-type: none;
   padding-right:15px;
 }
 .App-link {
-  color: #61dafb;
+  color: $textColor;
 }
 .siteWrapper{
-  display:flex;
-  justify-content: flex-start;
-  background-color:$bgColor;
-  width:100%;
-  max-width:1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin:0 auto;
+   width:100%;
+  max-width:1000px;
   height:100%;
   padding:15px;
 }
 
-h1,h2,h3,h4,h5,h6{
-  padding:15px 0
-}
-.header{
-  background:$primaryColor;
-  display:flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+
+.homeParagraph{
+  color:$secondaryColor; 
   width:100%;
-  padding:15px 0
+  max-width:650px;
+  padding:15px 0  
 }
 
-#headerLogo{
-  width:100%;
-  max-width:150px;
-  height:50px;
-}
-#homeSection{
-  text-align: left;
-  color:#000; 
-  width:100% 
-}
 
 .homeHeader h1{
-  text-align: center;
-  font-size:49px;
-  color:$textColorSecondary;
+  font-size:79px;
+  color:$textColor;
   font-weight:200;
+  margin-bottom:0;
 }
-
 
 #homeSection h2{
   font-weight:300;
@@ -118,17 +111,16 @@ h1,h2,h3,h4,h5,h6{
   width:100%;
   max-width:150px
 }
-
-.homeAbout{
-  display:flex;
-  justify-content: center;
-  width:100%;
-  margin:0 auto;
+.paragraphSubHead{
+  color:$primaryColor
+}
+.paragraph{
+  color:$textColor;
 }
 .columnText{
   display: flex;
   justify-content: center;
-  color:#fff;
+  color:$textColor;;
   font-size:24px
   
 }
@@ -136,15 +128,7 @@ h1,h2,h3,h4,h5,h6{
   text-align: left;
 }
 
-#headerWrap{
-  display:flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width:100%;
-  max-width:1100px;
-  padding:0 15px
-}
+
 .borderLine{
   border-bottom:1px solid #04BF8A;
   width:300px;
@@ -152,7 +136,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .rowText{
-  color:$textColorSecondary;
+  color:$textColor;
 }
 
 .subList{
@@ -162,25 +146,79 @@ h1,h2,h3,h4,h5,h6{
   position:absolute;
 }
 .fontIcon{
-  color:#fff;
+  color:#ACCAF2;
   font-size:19px;
   margin-right:25px;
 }
+.fontIcon:hover{
+  color: $hoverColor; 
+  cursor: pointer;
+}
 
 #socialIcons{
+  text-align: center;
   width:100%;
   max-width:270px;
 }
 #email a{
-  color:#fff;
+  color:$linkColor;
   text-decoration:none;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   font-size: 13px;
 }
+#email a:hover{
+  color: $hoverColor;
+}
+
 #bottomOfPageHeader{
   width: 100%;
   font-size:36px;  
+}
+
+.paragraphSubHead{
+  font-size:68px;
+}
+
+.copyright{
+   
+  color:$secondaryColor
+}
+
+footer{
+    position: absolute;
+    bottom:0;
+    left:100px;
+    width:100%;    
+    max-width: 1800px;
+    margin:0 auto
+}
+
+.company{
+  color:$linkColor;
+}
+
+#linkButton{
+  text-decoration: none;
+  padding:20px 15px;
+  border:2px solid $borderColor;
+  border-radius:13px;
+  margin-top:15px;
+  color:$linkColor;
+  transition:0.2s ease-in;
+}
+
+#linkButton:hover{
+  background:#174180;
+  color:$hoverColor;
+  letter-spacing: 4px;
+  transition:0.2s ease-in;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 @keyframes App-logo-spin {
